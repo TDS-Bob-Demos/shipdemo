@@ -1,0 +1,15 @@
+             PGM
+             DCLF       FILE(SHPCONFD)
+
+ LOOP:       SNDRCVF    RCDFMT(SCR1)
+             IF         COND(&IN03) THEN(GOTO CMDLBL(DONE))
+
+             CALL       PGM(SHPVAL) PARM(&SLOAD &SSTAT &SMSG &STRUK +
+                          &SWGT &SMAX)
+
+             IF         COND(&SSTAT *EQ 'HELD') THEN(CHGVAR +
+                          VAR(&IN50) VALUE('1'))
+             ELSE       CMD(CHGVAR VAR(&IN50) VALUE('0'))
+             GOTO       CMDLBL(LOOP)
+
+ DONE:       ENDPGM

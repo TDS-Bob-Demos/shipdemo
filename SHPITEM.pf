@@ -1,0 +1,8 @@
+     A                                      UNIQUE
+     A          R SHPITEMR
+     A            ITITEM        15A
+     A            ITDESC        30A
+     A            ITUOM          3A
+     A            ITWGTU         9P 4
+     A            ITHEAT        10A
+     A          K ITITEM

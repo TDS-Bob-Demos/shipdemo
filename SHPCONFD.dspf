@@ -1,0 +1,20 @@
+     A                                      DSPSIZ(24 80 *DS3)
+     A                                      CA03(03 'Exit')
+     A          R SCR1
+     A                                  1  2'SHPCONF'
+     A                                  1 25'DOCK SHIPMENT CONFIRMATION'
+     A                                  1 71DATE EDTCDE(Y)
+     A                                  4  4'Load number . . . :'
+     A            SLOAD          5Y 0B  4 25EDTCDE(Z)
+     A                                  6  4'Truck . . . . . . :'
+     A            STRUK          6A  O  6 25
+     A                                  7  4'Load weight (lb)  :'
+     A            SWGT           9Y 0O  7 25EDTCDE(1)
+     A                                  8  4'Truck max (lb)  . :'
+     A            SMAX           7Y 0O  8 25EDTCDE(1)
+     A                                 10  4'Status  . . . . . :'
+     A            SSTAT          8A  O 10 25DSPATR(HI)
+     A  50                                  COLOR(RED)
+     A N50                                  COLOR(GRN)
+     A            SMSG          50A  O 12  4DSPATR(HI)
+     A                                 23  2'F3=Exit   Enter=Validate load'

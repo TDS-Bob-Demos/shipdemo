@@ -1,0 +1,9 @@
+     A                                      UNIQUE
+     A          R SHPLOADR
+     A            LDLOAD         5P 0
+     A            LDTRUK         6A
+     A            LDMAXW         7P 0
+     A            LDTOTW         9P 0
+     A            LDSTAT         8A
+     A            LDMSG         50A
+     A          K LDLOAD
